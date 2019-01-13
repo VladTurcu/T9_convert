@@ -10,7 +10,7 @@ APP.use(bodyParser.json());
 APP.use(bodyParser.urlencoded({ extended: true }));
 APP.use(cors());
 
-APP.use("/api/", ROUTER);
+APP.use("/api", ROUTER);
 
 APP.listen(PORT, () => console.log(`Express listening on port ${PORT}`));
 
