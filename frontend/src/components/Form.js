@@ -8,9 +8,10 @@ const StyledForm = styled.form`
     display: block;
 `;
 
-export const FormWrapper = styled.form`
+export const FormWrapper = styled.div`
     max-width: 300px;
     dislay: block;
+    margin-top: 20px;
 `;
 
 export const Input = styled.input`
@@ -32,15 +33,18 @@ export const Button = styled.button`
     outline: none;
     font-size: 18px;
     color: #ffffff;
-    background-color: #EB6A2A;
-    &.form_submit {
-        width: calc(50% - 2px);
-        margin: 1px;
-    }
     &:hover {
-        background-color: #C74F13;
         cursor: pointer;
     }
+    &.form_submit {
+        background-color: #36C267;
+        width: calc(50% - 2px);
+        margin: 1px;
+        &:hover {
+            background-color: #1F8D45;
+        }
+    }
+
     &.negative {
         margin: 1px;
         width: calc(50% - 2px);

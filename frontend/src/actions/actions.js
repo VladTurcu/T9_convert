@@ -1,6 +1,6 @@
 import * as Types from "./types/actions";
 
-const API = process.env.ENDPOINT_URL ? process.env.ENDPOINT_URL : "http://localhost:8000/api?value=";
+const API = process.env.ENDPOINT_URL || "http://localhost:8000/api?value=";
 
 const OPTIONS = {
   method: "GET",

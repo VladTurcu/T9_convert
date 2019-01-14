@@ -10,10 +10,12 @@ const initialState = {
 
 const reducer = (state=initialState, action) => {
   switch (action.type) {
+
     case Types.ADD_DATA: {
+      const newValue = state.value + action.payload.value;
       return {
         ...state,
-        value: `${state.value}${action.payload.value}`,
+        value: `${newValue}`,
         loading: true,
         loaded: false,
         error: false
@@ -29,6 +31,13 @@ const reducer = (state=initialState, action) => {
           ...state,
           loading: false,
           value: newValue
+        };
+      }
+      if (value.length === 0) {
+        return {
+          ...state,
+          loading: false,
+          data: []
         };
       }
       return {
